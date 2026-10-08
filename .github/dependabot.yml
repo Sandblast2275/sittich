@@ -1,0 +1,13 @@
+# Weekly pull requests for new versions of the GitHub Actions and of the
+# Python base image. Python packages are updated by hand with uv (README),
+# because requirements.txt carries hashes generated from requirements.in.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /sittich
+    schedule:
+      interval: weekly
