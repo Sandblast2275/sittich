@@ -1,0 +1,17 @@
+configuration:
+  threads:
+    name: CPU threads
+    description: Number of CPU threads used for recognition. 4 is usually fastest.
+  hotwords:
+    name: Prefer device names
+    description: >-
+      Names of devices exposed to Assist, their aliases, areas and floors are
+      recognized preferentially. Costs about 100 ms per command.
+  hotwords_score:
+    name: Bias strength
+    description: 2.0 works well. Values from about 3 distort other words.
+  debug:
+    name: Verbose log
+    description: Writes additional details to the log, including the loaded names.
+network:
+  10300/tcp: Wyoming (only needed for access from outside Home Assistant)

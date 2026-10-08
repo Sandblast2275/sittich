@@ -1,0 +1,19 @@
+services:
+  sittich:
+    build: ./sittich
+    image: wyoming-sittich:local
+    container_name: sittich
+    restart: unless-stopped
+    # Host network so Home Assistant finds the server via zeroconf/mDNS.
+    # Without zeroconf: remove this line, use "ports: [10300:10300]" and add
+    # the Wyoming integration in HA by hand (host = this server, port 10300).
+    network_mode: host
+    # Hotwords: names from Home Assistant. Put HA_URL and HA_TOKEN in a
+    # file named .env next to this one (see .env.example).
+    env_file:
+      - path: .env
+        required: false
+    command:
+      - --uri=tcp://0.0.0.0:10300
+      - --threads=4
+      - --zeroconf=sittich

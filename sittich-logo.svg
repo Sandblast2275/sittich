@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Sittich-Icon</title>
+  <desc id="desc">Eigenständiges, rundes Sittich-Icon in Seitenansicht nach rechts. Oberkörper mit grüner Silhouette, gelbem Gesicht, türkisfarbenem Flügel und dunkler Kontur auf transparentem Hintergrund.</desc>
+  <g stroke="#203D36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M136 38C173 38 198 70 198 112C198 170 173 208 126 208C105 208 87 201 78 187C75 162 86 138 97 120C88 104 87 86 93 69C101 48 117 38 136 38Z" fill="#82C95B"/>
+    <path d="M137 51C164 50 185 73 188 98C190 117 178 132 159 133C132 133 111 108 110 86C109 66 121 52 137 51Z" fill="#F6DC59" stroke="none"/>
+    <path d="M97 131C82 146 76 169 81 184C111 193 141 176 150 149" fill="#30AD94"/>
+    <path d="M181 105C193 103 204 108 209 118C206 127 200 134 191 139C193 128 189 121 181 118Z" fill="#EEA344"/>
+  </g>
+  <circle cx="165" cy="86" r="8" fill="#203D36"/>
+  <circle cx="167" cy="83.5" r="2.2" fill="#FFFFFF"/>
+</svg>

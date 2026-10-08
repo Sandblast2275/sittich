@@ -1,0 +1,17 @@
+configuration:
+  threads:
+    name: CPU-Threads
+    description: Anzahl der CPU-Threads für die Erkennung. 4 ist meist am schnellsten.
+  hotwords:
+    name: Gerätenamen bevorzugen
+    description: >-
+      Namen der für Assist freigegebenen Geräte, ihre Aliase sowie Räume und
+      Etagen werden bevorzugt erkannt. Kostet etwa 100 ms pro Befehl.
+  hotwords_score:
+    name: Stärke der Bevorzugung
+    description: 2.0 hat sich bewährt. Zu hohe Werte (ab etwa 3) verfälschen andere Wörter.
+  debug:
+    name: Ausführliches Protokoll
+    description: Schreibt zusätzliche Details ins Protokoll, auch die geladenen Namen.
+network:
+  10300/tcp: Wyoming (nur nötig für Zugriff von außerhalb von Home Assistant)

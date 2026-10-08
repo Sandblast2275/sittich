@@ -1,0 +1,7 @@
+# Packages Sittich uses directly. requirements.txt is generated from this
+# file with exact versions and hashes for everything, see README ("Updates").
+numpy
+sherpa-onnx
+websockets
+wyoming
+zeroconf

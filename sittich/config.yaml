@@ -1,0 +1,28 @@
+name: Sittich
+version: "0.1.0"
+slug: sittich
+description: Deutsche Spracherkennung mit parakeet-primeline – lokal, nur CPU
+# Built and published by GitHub Actions (.github/workflows/build.yml).
+# Must match your GitHub user name in lower case.
+image: ghcr.io/sandblast2275/{arch}-sittich
+arch:
+  - amd64
+discovery:
+  - wyoming
+hassio_api: true
+# Read names of exposed entities, areas and aliases for hotwords.
+homeassistant_api: true
+options:
+  threads: 4
+  hotwords: true
+  hotwords_score: 2.0
+  debug: false
+schema:
+  threads: int(1,16)
+  hotwords: bool
+  hotwords_score: float(0.5,5)
+  debug: bool
+# The Supervisor restarts the app if the port stops answering.
+watchdog: tcp://[HOST]:[PORT:10300]
+ports:
+  10300/tcp: null
