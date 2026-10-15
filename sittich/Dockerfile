@@ -2,7 +2,7 @@
 # (standard library only, see model.py).
 # Base: Debian 13 "trixie", pinned by digest so every build starts from the
 # same bits. Dependabot proposes updates (.github/dependabot.yml).
-FROM python:3.13-slim-trixie@sha256:bf44cdfcb76cd3b41e879bc058fc37ec5872002ccfde7fcb765e218cde0cd79c AS model
+FROM python:3.14-slim-trixie@sha256:a2b82f3c48559aa0a8446d9af49826b6e2b2016f4cd2afabfe6013ec53729170 AS model
 COPY wyoming_sittich/model.py /tmp/model.py
 # Fixed permissions and timestamps, so the files are bit-identical in every
 # build and the layer below keeps its digest across releases.
@@ -11,7 +11,7 @@ RUN python /tmp/model.py /model \
     && touch -d @0 /model/* /model
 
 # Stage 2: the server.
-FROM python:3.13-slim-trixie@sha256:bf44cdfcb76cd3b41e879bc058fc37ec5872002ccfde7fcb765e218cde0cd79c
+FROM python:3.14-slim-trixie@sha256:a2b82f3c48559aa0a8446d9af49826b6e2b2016f4cd2afabfe6013ec53729170
 
 # The model comes first and is linked as an independent layer: updates of
 # Python, packages or code do not change it, so Home Assistant downloads the
